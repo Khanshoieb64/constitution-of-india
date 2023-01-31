@@ -1,0 +1,440 @@
+#grad
+{
+    background-color: #252526; 
+    background-image: linear-gradient(to top , #292b3d,#252526); 
+}
+#grad1
+{
+    background-color: #252526; 
+    background-image: linear-gradient(to top , #292b3d,#252526); 
+}
+
+ul.nav li { cursor: pointer; display: inline-block; }
+	ul.nav li.active {	cursor: default; }
+  
+	.tabs li a{
+		background: green !important;
+		display: block;
+	}
+	.tabs li.selected{
+		background: #f67b23;
+		margin-left: 0 !important;
+		padding: 8px 0;
+		text-align: center;
+		
+	}
+	.tabs li.selected a{
+		background: #f67b23 !important;
+		border: none !important;
+		display: block;
+		color: #000 !important;
+	}
+	ul.tabs{
+		width: 100% !important;
+	}
+   .tabs li{
+		background: green;
+		margin-left: 0 !important;
+		padding: 8px 0;
+		text-align: center;
+		
+	}
+</*...........1............ */>
+@media screen and (max-width: 308px)
+{
+  .tabs li.selected
+	{
+		width: 49.2%;
+	}
+	.tabs li
+	{
+		width: 49.2%;
+	}
+}	
+@media screen and (min-width: 1200px)
+{
+	.tabs li.selected
+	{
+		width: 49.8%;
+	}
+	.tabs li
+	{
+		width: 49.8%;
+	}
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+{
+  .tabs li.selected
+	{
+		width: 49.7%;
+	}
+	.tabs li
+	{
+		width: 49.7%;
+	}
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+  .tabs li.selected
+	{
+		width: 49.6%;
+	}
+	.tabs li
+	{
+		width: 49.7%;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 501px)
+{
+  .tabs li.selected
+	{
+		width: 49.5%;
+	}
+	.tabs li
+	{
+		width: 49.5%;
+	}
+}
+
+@media screen and (max-width: 500px) and (min-width: 465px)
+{
+  .tabs li.selected
+	{
+		width: 49.5%;
+	}
+	.tabs li
+	{
+		width: 49.5%;
+	}
+}
+
+@media screen and (max-width: 464px) and (min-width: 395px)
+{
+  .tabs li.selected
+	{
+		width: 49.4%;
+	}
+	.tabs li
+	{
+		width: 49.4%;
+	}
+}
+
+@media screen and (max-width: 394px) and (min-width: 341px)
+{
+  .tabs li.selected
+	{
+		width: 49.3%;
+	}
+	.tabs li
+	{
+		width: 49.3%;
+	}
+}
+
+@media screen and (max-width: 340px) and (min-width: 308px)
+{
+  .tabs li.selected
+	{
+		width: 49.2%;
+	}
+	.tabs li
+	{
+		width: 49.2%;
+	}
+}	
+	
+/* Text Size Resize*/	
+@media screen and (max-width: 308px)
+{
+  h1.info {
+  color: #000080;
+  font: bold 22px/  'OpenSans';
+  }
+}
+
+@media screen and (min-width: 1200px)
+{
+  .info  h1{
+  color: #000080;
+  font: bold 15px/18px 'OpenSans';
+  width: 265px;
+  line-height:22px;"
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+{
+  .info  h1{
+  color: #000080;
+  font: bold 14px/16px 'OpenSans';
+  width: 231px;
+ line-height:19.5px;"
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+  .info  h1{
+  color: #000080;
+  font: bold 15px/18px 'OpenSans';
+  line-height:22px;"
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 501px)
+{
+  .info  h1{
+  color: #000080;
+  font: bold 14px/17px 'OpenSans';
+  line-height:20px;"
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 398px)
+{
+  .info  h1{
+  color: #000080;
+  font: bold 14px/16px 'OpenSans';
+  line-height:20px;"
+  }
+}
+
+@media screen and (max-width: 397px) and (min-width: 331px)
+{
+  .info  h1{
+  color: #000080;
+  font: bold 12px/14px 'OpenSans';
+  line-height:20px;"
+  }
+}
+
+@media screen and (max-width: 330px)
+{
+  .info  h1{
+  color: #000080;
+  font: bold 11px/12px 'OpenSans';
+  }
+}
+
+</*....................... */>
+	
+@media screen and (max-width: 308px)
+{
+  h2.info {
+  color: #000080;
+  font: 20px/20px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (min-width: 1200px)
+{
+  .info  h2{
+  color: #000080;
+  font:  bold 16.5px/18px 'Times New Roman, Times, serif';
+  width: 265px;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+{
+  .info  h2{
+  color: #000080;
+  font:  bold 15px/14px 'Times New Roman, Times, serif';
+  width: 234px;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+  .info  h2{
+  color: #000080;
+  font:  bold 16.5px/17px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 501px)
+{
+  .info  h2{
+  color: #000080;
+  font:  bold 15px/17px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 398px)
+{
+  .info  h2{
+  color: #000080;
+  font:  bold 14px/15px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 397px) and (min-width: 331px)
+{
+  .info  h2{
+  color: #000080;
+  font:  bold 12px/13px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 330px)
+{
+  .info  h2{
+  color: #000080;
+  font:  bold 11px/12px 'Times New Roman, Times, serif';
+  }
+}
+/* Text Size Resize*/
+/* BackGroud Image Resize*/	
+@media screen and (max-width: 308px)
+{
+  body {
+	background: #edefea url(../image/header/bg-body.jpg) repeat-x left top;
+	background-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px)
+{
+  body{
+	background: #edefea url(../image/header/bg-body1.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+{
+  body{
+	background: #edefea url(../image/header/bg-body2.jpg) repeat-x left top;
+	background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+  body{
+	background: #edefea url(../image/header/bg-body3.jpg) repeat-x left top;
+	background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 501px)
+{
+  body{
+	background: #edefea url(../image/header/bg-body4.jpg) repeat-x left top;
+	background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 398px)
+{
+  body{
+	background: #edefea url(../image/header/bg-body5.jpg) repeat-x left top;
+	background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 397px) and (min-width: 309px)
+{
+  body{
+	background: #edefea url(../image/header/bg-body6.jpg) repeat-x left top;
+	background-size: 100%;
+  }
+}
+
+@media screen and (max-width: 308px)
+{
+  body{
+	background: #edefea url(../image/header/bg-body7.jpg) repeat-x left top;
+	background-size: 100%;
+  }
+}
+/* BackGroud Image Resize*/	
+		
+@media screen and (max-width: 767px)
+{
+ .embed-responsive-16by9::before
+ {
+   padding-top: 78.25%;
+ }
+} 
+
+@media screen and (max-width: 992px) and (min-width: 768px)
+{
+  ul.tabs li a{
+   		font-size: 10px;
+		color: #fff !important;
+  }
+}
+
+</*....................... */>
+	
+@media screen and (min-width: 1200px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  20px/22px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  18px/20px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  16px/18px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 501px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  14px/16px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 465px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  10px/12px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 464px) and (min-width: 395px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  9px/11px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 394px) and (min-width: 309px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  8px/10px 'Times New Roman, Times, serif';
+  }
+}
+
+@media screen and (max-width: 308px)
+{
+  ul.tabs li a{
+  color: #fff !important;
+  font:  6px/8px 'Times New Roman, Times, serif';
+  }
+}
+

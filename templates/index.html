@@ -1,0 +1,468 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Republic day</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="{% static './assets/css/style.css' %}">
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <!--for Marquee-->
+<script src="{% static 'crawler.js' %}"></script>
+<script src="{% static 'jquery.min.js' %}"></script>
+<script src="{% static 'nic.js' %}"></script>
+<script src="{% static 'pagination.js' %}"></script>
+<script src="{% static 'popper.min.js' %}"></script>
+<script src="{% static 'tabcontent.js' %}"></script>
+<script src="{% static 'templatemo_script.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'nic.css' %}">
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+<style>
+    .navbar-toggler-icon{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background-color: orange !important;
+        border-radius: 5px;
+        color: beige !important;
+    }
+</style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <span class="main-logo"> <img src="{% static 'n.gif' %}" alt=""></span>
+            <a class="navbar-brand" href="#" style="color:orange;"> Constitution.</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events">Event</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="myprofile">My Profile</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback">Feedback</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav flex-row">
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="social-icon" href="logout">Logout<i class="bi bi-box-arrow-left"></i></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="social-icon" href="login">Login<i class="bi bi-box-arrow-in-right"></i></a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- background Vid -->
+
+
+
+    
+
+    <div class="video-container">
+        <video autoplay muted loop>
+          <source src="{% static 'finalbg.mp4' %}" type="video/mp4">
+        </video>
+        <div class="text-box">
+            <span class="main-heading">भारतीय संविधान<span>
+
+                <!-- clock -->
+                <div class="clock">
+                    <div class="hours">
+                      <div class="first">
+                        <div class="number">0</div>
+                      </div>
+                      <div class="second">
+                        <div class="number">0</div>
+                      </div>
+                    </div>
+                    <div class="tick">:</div>
+                    <div class="minutes">
+                      <div class="first">
+                        <div class="number">0</div>
+                      </div>
+                      <div class="second">
+                        <div class="number">0</div>
+                      </div>
+                    </div>
+                    <div class="tick">:</div>
+                    <div class="seconds">
+                      <div class="first">
+                        <div class="number">0</div>
+                      </div>
+                      <div class="second infinite">
+                        <div class="number">0</div>
+                      </div>
+                    </div>
+                  </div>
+
+        </div>
+    </div>
+     
+    
+  <!-- Quotes -->
+  <section id="work" class="section-padding section-connector" style="padding-top: 40px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div  class="col-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="setion-title text-center">
+                    <h1>Dr B.R. Ambedkar</h1>
+                    <p style="font-size: 20px; font-family: 'Times New Roman', Times, serif; font-style:italic">&#8926;Constitution is not a mere lawyers document, it is a vehicle of Life, and its spirit is always the spirit of Age &#8927;</p>
+                    
+                </div>
+            </div>
+        </div>
+
+    <!-- marquee -->
+    
+       
+    <div class="" id="grad1">
+        <div class="">
+          <div class="marquee" id="mycrawler2" align="center">
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark1.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark2.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark3.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark4.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark5.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark6.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark7.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark8.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark9.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark10.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark11.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark12.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark13.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark14.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark15.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark1.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark2.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark3.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark4.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark5.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark6.jpeg' %}"  border=1></a>
+            <a href="#" ><img id="img" class="mar" src="{% static 'Marquee/mark7.jpeg' %}"  border=1></a>
+          </div>				
+        </div>
+        </div>
+
+        <!-- Making of constition -->
+        <section id="resume" class="section-padding section-connector" >
+           
+            <div class="container">
+                
+                <div class="row">
+                    <div  id="resumee" class="col-12" data-aos="fade-up" data-aos-delay="100">
+                        <div class="setion-title text-center">
+                            
+                            <h1>The Making Of India's Constitution</h1>
+                            <p></p>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-5">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                                <div class="eduexp p-5 pt-0">
+                                    <h5 class="text-brand">Dec.9,1946</h5>
+                                    
+                                    <p class="mb-0">First meeting of the Constitution Assembly</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                                <div class="eduexp p-5 pt-0">
+                                    <h5 class="text-brand">Dec.11,1946</h5>
+                                    
+                                    <p class="mb-0">Dr Rajendra Prasad elected as its President.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                                <div class="eduexp p-5 pt-0 pb-0">
+                                    <h5 class="text-brand">Aug.29,1947</h5>
+                                    
+                                    <p class="mb-0">Drafting Committee apointed ,with Dr.B.R.Ambedkar  as the chairmain .</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                                <div class="eduexp p-5 pt-0">
+                                    <h5 class="text-brand">Nov.04,1947</h5>
+                                    
+                                    <p class="mb-0">Draft Constitution submitted</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="eduexp p-5 pt-0">
+                                    <h5 class="text-brand">Non.26,1949</h5>
+                                    
+                                    <p class="mb-0">Drafting Completed.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="eduexp p-5 pt-0 pb-0">
+                                    <h5 class="text-brand">Jan.24,1950</h5>
+                                    
+                                    <p class="mb-0">The handwritten Constitution signed <br> <br>
+                                        <span class="jan26">Jan.26,1950 Constitution legally signed &#10004</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                       <!-- made cahnge here  -->
+            <div class="row g-2" style="margin-top: 100px;">
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project">
+                        <img src="{% static 'ab.jpeg' %}" alt="">
+                        <div class="content">
+                            <a href="{% static 'ab.jpeg' %}" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project">
+                        <img src="{% static 'behari.jpg' %}" alt="">
+                        <div class="content">
+                            <a href="{% static 'behari.jpg' %}" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project">
+                        <img  src="{% static 'asdullah.jpg' %}" alt="">
+                        <div class="content">
+                            <a href="{% static 'asdullah.jpg' %}" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project">
+                        <img src="{% static 'iyer.jpg' %}" alt="">
+                        <div class="content">
+                            <a href="{% static 'iyer.jpg' %}" data-fancybox="gallery" class="btn btn-outline-light">View Project</a>
+                        </div>
+                    </div>
+                </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- Quiz -->
+
+
+<div class="main-quiz">
+    <a href="quiz" target="_blank">
+        <img id="quiz-img" src="{% static 'quizimage.gif' %}" alt="">
+</div>
+<div class="quiz-p">
+    <p>Tap To Play</p>
+</div>
+<style>
+    .main-quiz{
+    
+        padding-bottom:80px;
+        padding-top:80px;
+        margin-top:10px;
+        margin-bottom:0px;
+        font-size: 20px;
+        width: 60%;
+        object-position: center;
+        display: inline-block;
+   
+   }
+   #quiz-img{
+       height: 150px;
+       
+   }
+   .quiz-p{
+       display: inline-block;
+       width: 200px;
+       background-color:green;
+       padding: 10px;
+       font-size: 30px;
+       color: white;
+       border-radius: 20px 60px;
+       text-align: center;
+       font-family: 'Great Vibes', cursive;
+       font-weight: bold;
+       box-shadow: 2px 2px 2px black;
+      
+   }
+   .quiz-p:hover{
+       box-shadow: 3px 3px 15px orange;
+       color: orange;
+   }
+</style>
+<!-- <div class="main-quiz">
+    <a href="quiz" target="_blank">
+        <button>Quiz</button>
+</div> -->
+
+
+
+ <!-- footer -->
+ 
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row gy-5">
+                        <div class="col-md-4">
+                            <div class="mapouter"><div class="gmap_canvas"><iframe width="450" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=it vedant andheri&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:250px;width:450px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:450px;}</style></div></div>
+                        </div>
+                        <div class="col-md-3 ms-auto">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Contact</h4>
+                            <ul>
+                                <li>Email: email@gmail.com</li>
+                                <li>Phone: (+9369-69-6969)</li>
+                                <li>Address: India, Mumbai</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <p class="mb-0"> &copy;It Vedant Andheri</p>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+    <!-- cahat bot code -->
+    <!-- chat bot intregration -->
+    <link rel="stylesheet" href="{% static 'css.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script defer src="{% static 'js/main.js' %}"></script>
+    <!-- chat bot intregration -->
+
+    <div id="icon-container">
+        <img src="{% static 'chatbot.jpg' %}" class="rounded-circle float-left img-thumbnail"alt="..." data-toggle="collapse" href="#chat-container" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" id="icon">
+    </div>
+
+    <div class="container float-right col-lg-3 col-md-4 my-4 d-none xyzxyz"  style=" padding: 10px; border: 3px solid black; border-radius: 10px; background-color: rgb(253, 253, 253);" id="chat-container">
+
+
+        <div class="media">
+            <img src="{% static 'chatbot.jpg' %}" class="rounded-circle float-left img-thumbnail chat-icon"  style="cursor: pointer; width:25%;"; alt="..." data-toggle="collapse" href="#chat-container" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+            <div class="media-body">
+            <h5 style="margin:10px;">Chat Us</h5>
+            <span style="margin-left:10px;color: #55E0A3;">Online</span>
+            </div>
+            
+        </div>
+
+        <!--Message box container-->
+        <div id="chatContainer" class="container border overflow-auto" style="height:370px;">
+        
+               <!-- < Chatbot message design
+                <div class="w-50 float-left shadow-sm" style=" margin: 10px; padding: 5px;">
+                
+                    <span> Chat:</span>
+                    <span style="margin-top: 10px; padding: 10px;">How are you?</span>
+               
+                </div>
+
+                    User message design-
+                <div class="w-50 float-right shadow-sm" style=" margin: 10px; padding: 5px;">
+                
+                    <span> You:</span>
+                    <span style="margin-top: 10px; padding: 10px;">Great</span>
+
+                </div>-->
+                
+        
+        </div>
+
+
+        <div class="input-group">
+            
+            <input id="textbox" type="text" class="form-control"/>
+
+            <div class="input-group-append">
+
+                <button id="sendBtn" type="button" class="btn btn-primary">send</button>
+
+            </div>
+        
+        </div>
+
+   
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'gallery_img/style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+            <h1>image galary</h1>
+        <div class="image-container">
+
+            <div class="image"><img src="{% static 'gallery_img/day21' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day4' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day6' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day7' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day8' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day18' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day19' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day22' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day2' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day40' %}.png" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day35' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day36' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day31' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day34' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day32' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day33' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day1' %}.png" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day2' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day3' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day4' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day5' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day6' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day7' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day8' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day9' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day10' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day11' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day12' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day13' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day17' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day18' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day19' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day22' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day23' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day24' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day26' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day25' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day28' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day29' %}.png" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day30' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day32' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day33' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day35' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day37' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day38' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day39' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day11' %}.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'gallery_img/day40' %}.png" alt=""></div>
+
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="{% static 'gallery_img/day.png '%}" alt="">
+        </div>
+
+    </div>
+    
+
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!--<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" id="" placeholder="username">
+    <input type="text" name="password" id="" placeholder="password">
+    <input type="submit" value="submit">
+</form>
+{{request.user}}-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'form/log.css' %}">
+ 
+  <!-- jQuery CDN Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static 'form/log.js' %}"></script>
+  <title>login</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="btn00">
+        <button class="signUpBtn">Login your account</button>
+        <!-- <button class="loginBtn">LOG IN</button> -->
+      </div>
+      <form class="signUp" action="" method="post">
+        {% csrf_token %}
+        <!-- <div class="formGroup">
+          <input type="email" placeholder="Email ID" name="email" required autocomplete="off">
+        </div> -->
+          <div class="formGroup">
+            <input type="text" id="username" name="username" placeholder="User Name" required autocomplete="off">
+          </div>
+        <div class="formGroup">
+          <input type="password" id="password" name="password" placeholder="Password" required autocomplete="off">
+        </div>
+        <div class="show">
+          <input type="checkbox" onclick="view()" > Show Password 
+          <!-- <a href="forget.html" class="forget">Forget Password</a> -->
+        </div>
+        <!-- <div class="checkBox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="text">I agree with term & conditions</span>
+        </div> -->
+        <div class="formGroup">
+          <button style="user-select:none;" type="button" class="btn2 btnlogin"><input class="onlygodknow" type="submit" value="Login"></button>
+          <!-- <input type="submit" class="btn2" value="Login"> -->
+          <style>
+            .onlygodknow{
+              width: 100%;
+              height: 100%;
+              background-color: transparent;
+              border: 0px !important;
+              cursor: pointer !important;
+            }
+            .btnlogin{
+              padding: 0 !important;
+              cursor: pointer !important;
+              margin-top: 10px !important;
+            }
+          </style>
+        </div>
+ 
+      </form><br<br><br>
+       <div style="text-align: center;color: rgb(228, 222, 222);">
+        <p class="text-center text-muted mt-5 mb-0">Don't have an account?  <a href="signup"
+          class="fw-bold text-body" style="color: white;font-weight: bold; cursor:pointer; user-select:none"><u>Register</u></a></p>
+          </div>
+      </div>
+    </div>
+ 
+  <script src="{% static 'form/jQuery.js' %}"></script>
+</body>
+ 
+</html>

@@ -1,0 +1,19 @@
+#icon{
+    width: 6%;
+    position: fixed; 
+    right: 70px;
+    bottom: 70px;
+    cursor: pointer;
+}
+#icon:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.icon-container{
+    width: 10%;
+}
+.xyzxyz{
+    position: fixed !important;
+    top: 20%;
+    right: 20px;
+}

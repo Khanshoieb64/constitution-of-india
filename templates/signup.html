@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="fullname" placeholder="Fullname"><br>
+    <input type="text" name="mail_address" placeholder="E-mail"><br>
+    <input type="number" name="mobile_no" placeholder="Mobile_no"><br>
+    <input type="text" name="username" placeholder="Username"><br>
+    <input type="password" name="password1" placeholder="Password"><br>
+    <input type="password" name="password2" placeholder="Password"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'form/style.css' %}">
+  <!-- jQuery CDN Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Transparent form</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="btn">
+        <button class="signUpBtn">CREATE AN ACCOUNT</button>
+        <!-- <button class="loginBtn">LOG IN</button> -->
+      </div>
+      <form class="signUp" action="" method="post">
+        {% csrf_token %}
+        <div class="formGroup">
+          <input type="text" id="firsname" name="fullname" placeholder="Full Name" required autocomplete="off">
+        </div>
+        <div class="formGroup">
+          <input type="email" placeholder="Email ID" name="mail_address" required autocomplete="off">
+        </div>
+        <div class="formGroup">
+            <input type="number" id="mobile" name="mobile_no" placeholder="Mobile No." required autocomplete="off">
+          </div>
+          <div class="formGroup">
+            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+            <input type="text" id="username" name="username" placeholder="User Name" required autocomplete="off">
+          </div>
+        <div class="formGroup">
+          <input type="password" id="password" name="password1" placeholder="Password" required autocomplete="off">
+        </div>
+        <div class="formGroup">
+          <input type="password" id="confirmPassword" name="password2" placeholder="Confirm Password" required autocomplete="off">
+        </div>
+        <!-- <div class="checkBox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="text">I agree with term & conditions</span>
+        </div> -->
+        <div class="formGroup">
+          <button style="user-select:none;" type="button" class="btn2 btnlogin"><input class="onlygodknow" type="submit" value="Register"></button>
+        </div>
+		<style>
+            .onlygodknow{
+              width: 100%;
+              height: 100%;
+              background-color: transparent;
+              border: 0px !important;
+              cursor: pointer !important;
+            }
+            .btnlogin{
+              padding: 0 !important;
+              cursor: pointer !important;
+              margin-top: 10px !important;
+            }
+         </style>
+      </form><br><br>
+        <div style="text-align: center;color: rgb(228, 222, 222);">
+      <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login"
+        class="fw-bold text-body" style="color: white;font-weight: bold;"><u>Login here</u></a></p>
+        </div>
+    </div>
+  </div>
+ 
+  <script src="{% static 'form/jQuery.js' %}"></script>
+</body>
+ 
+</html>
